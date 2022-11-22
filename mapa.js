@@ -25,3 +25,90 @@ var circle = L.circle([19.44361, -99.10499], {
 }).addTo(map)
     .bindPopup('Venustiano Carranza')
     .openPopup();
+
+    //Cargando archivos desde el excel.
+
+    class Excel {
+        constructor(content){
+            this.content= content
+        }
+        header(){
+            return this.content[0]
+        }
+    
+        rows(){
+            return new RowCollection(this.content.slice(0,this.content.length))
+        }
+    }
+    class RowCollection{
+        constructor(rows){
+            this.rows=rows
+        }
+        
+        get(index){
+            return new Row(this.rows[index])
+        }
+    
+        count(){
+            return this.rows.length
+        }
+    }
+    class Row{
+        constructor(row){
+            this.row=row
+        }
+    
+       
+        colonia1(){
+            return this.row[5]
+        }
+        latitud1(){
+            return this.row[6]
+        }
+        longitud1(){
+            return this.row[7]
+        }
+       
+    
+    }
+    //clase que pondra datos de excel en la tabla
+    
+    class ExcelPinter{
+        static print(tableId, excel){
+            const table= document.getElementById(tableId)
+            //Imprime cabecera
+         // excel.header().forEach(title=>{
+            //table.querySelector("thead>tr").innerHTML += `<td>${title}</td>`
+         //  })
+         
+           //imprime datos
+          for (let index = 0; index < excel.rows().count(); index++) {
+            const row = excel.rows().get(index);
+    
+            table.querySelector('tbody').innerHTML += `
+            <tr>
+              
+                <td>${row.colonia1()}</td>
+                <td>${row.latitud1()}</td>
+                <td>${row.longitud1()}</td>
+                
+            </tr>
+            `
+            
+          }
+        }
+    }
+    
+    const excelInput= document.getElementById('excel-input')
+    
+    //Evento con el cual obtenemos datos de excel
+    
+    excelInput.addEventListener('change', async function(){
+        const content= await readXlsxFile(excelInput.files[0])
+    
+       const excel= new Excel(content)
+       
+       console.log(ExcelPinter.print('excel-table', excel))
+    
+    
+    })
