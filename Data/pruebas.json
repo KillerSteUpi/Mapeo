@@ -1,0 +1,152 @@
+{
+    "type": "FeatureCollection",
+    "name": "Paraderos_RUTA",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "alcaldia": "alvaro obregon",
+                "colonia": "el capulín",
+                "X":" -99.20329",
+                "Y":"  19.35867 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.209691,
+                    19.396830,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "alcaldia": "alvaro obregon",
+                "colonia": "Jose Maria Pino Suarez",
+                "X":" -99.20329",
+                "Y":"  19.35867 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.194778,
+                    19.399148,
+                    0.0
+                ]
+            } 
+            
+        } , 
+
+        {
+            "type": "Feature",
+            "properties": {
+                "alcaldia": "alvaro obregon",
+                "colonia": "Los Alpes",
+                "X":" -99.190997",
+                "Y":"  19.377019 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.195072,
+                    19.361037,
+                    0.0
+                ]
+            } 
+            
+        } ,
+        {
+            "type": "Feature",
+            "properties": {
+                "alcaldia": "alvaro obregon",
+                "colonia": "Progreso Tizapan",
+                "X":" -99.190997",
+                "Y":"  19.377019 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.200717,
+                    19.340159,
+                    0.0
+                ]
+            } 
+            
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "alcaldia": "alvaro obregon",
+                "colonia": "Florida",
+                "X":" -99.181855",
+                "Y":"  19.377019 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.200717,
+                    19.357383,
+                    0.0
+                ]
+            } 
+            
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "alcaldia": "alvaro obregon",
+                "colonia": "Herón Proal",
+                "X":" -99.181855",
+                "Y":"  19.377019 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.227777,
+                    19.357351,
+                    0.0
+                ]
+            } 
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]
+}
+
+
+
+
+
